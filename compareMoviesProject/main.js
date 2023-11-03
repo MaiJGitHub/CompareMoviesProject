@@ -1,4 +1,5 @@
 //movie data
+import Chart from 'chart.js/auto';
 import movies from "./movie-data.json";
 let defaultMovies = movies;
 
@@ -34,7 +35,7 @@ const initMoviesIfEmpty = () => {
 /*******DOM *******/
 
 //display all movies
-const listOfAllMoives = document.getElementById("listOfAllMovies");
+const listOfAllMovies = document.getElementById("listOfAllMovies");
 
 //helper creating each li
 const createMovieCards = (
@@ -58,6 +59,7 @@ const createMovieCards = (
   audienceScoreInfo.textContent = `Audience Score: ${audienceScore}`;
   domesticTotalInfo.textContent = `Domestic Total: ${domestic}`;
   genreInfo.textContent = `Genre: ${genre}`;
+
   li.append(
     h2Title,
     criticScoreInfo,
@@ -65,7 +67,7 @@ const createMovieCards = (
     domesticTotalInfo,
     genreInfo
   );
-  listOfAllMoives.append(li);
+    listOfAllMovies.append(li);
 };
 
 const showDefaultMovies = () => {
@@ -91,7 +93,6 @@ const createNewMovie = (event) => {
   const formData = new FormData(form);
   const { moiveTitle, CriticScore, AudienceScore, GrossSales, genre } =
     Object.fromEntries(formData);
-  //prepend
   createMovieCards(moiveTitle, CriticScore, AudienceScore, GrossSales, genre);
   form.reset();
 };

@@ -9,6 +9,7 @@
   </head>
   <body>
     <main>
+    <section id="formDisplaySection">
       <section id="addMoviesFormContainer">
         <form id="addMoviesForm">
           <h2>Add Your Movie</h2>
@@ -18,15 +19,15 @@
           </label> 
           <label for="critic-score">
             Critic Score:
-            <input type="number" id="critic-score" name="CriticScore" required>
+            <input type="number" id="critic-score" name="CriticScore" min="0" required>
           </label>
           <label for="audience-score">
             Audience Score:
-            <input type="number" id="audience-score" name="AudienceScore" required>
+            <input type="number" id="audience-score" name="AudienceScore" min="0" required>
           </label>
           <label for="gross-sales">
             Domestic Gross Sales:
-            <input type="number" id="gross-sales" name="GrossSales" required>
+            <input type="number" id="gross-sales" name="GrossSales" min="0" required>
           </label> 
           <label>
             Genre:
@@ -49,13 +50,19 @@
           <button class="submitBtn">Add Movie</button>
         </form>
       </section>
-
       <section id="moviesBox">
           <ul id="listOfAllMovies">
 
           </ul>
       </section>
+    </section>
+      <section>
+        <canvas id="barGraphMovies"></canvas>
+        <canvas id="pieChartMovies"></canvas>
+        <canvas id="scatterPlotMovies"></canvas>
+      </section>
     </main>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="./allCharts.js"></script>
   </body>
 </html>

@@ -4,6 +4,11 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
+}
+
+#formDisplaySection {
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -66,3 +71,13 @@ p {
   display: flex;
   align-items: center;
 }
+
+#barGraphMovies {
+  background-color: #333333;
+
+}
+
+#scatterPlotMovies {
+  background-color: #333333;
+}
+
