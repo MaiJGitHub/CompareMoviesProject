@@ -1,0 +1,68 @@
+body {
+  background-color: #181818;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#addMoviesForm {
+  display: block;
+  color: white;
+  background-color: #333333;
+  border: 5px solid #333333;
+  border-radius: 10px;
+  height: 15rem;
+  width: 22rem;
+  box-shadow: 2px 2px 4px #000000;
+  
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#listOfAllMovies {
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid white;
+  height: 85vh;
+  width: 150vh;
+  overflow-y: scroll;
+}
+
+li {
+  list-style: none;
+  color: white;
+  background-color: #333333;
+  border: 5px solid #333333;
+  border-radius: 10px;
+  width: 45vh;
+  height: 24vh;
+  margin: 1vh 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size:15px;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+#h2List {
+  margin-left: 10px;
+}
+
+p {
+  margin: 0;
+  margin-left: 10px;
+  border: 0;
+  display: flex
+}
+
+#addMoviesFormContainer {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Compare Movies Project</title>
+  </head>
+  <body>
+    <main>
+      <section id="addMoviesFormContainer">
+        <form id="addMoviesForm">
+          <h2>Add Your Movie</h2>
+          <label for="moiveTitle">
+            Movie Title:
+            <input type="text" id="movie-title" name="moiveTitle" required>
+          </label> 
+          <label for="critic-score">
+            Critic Score:
+            <input type="number" id="critic-score" name="CriticScore" required>
+          </label>
+          <label for="audience-score">
+            Audience Score:
+            <input type="number" id="audience-score" name="AudienceScore" required>
+          </label>
+          <label for="gross-sales">
+            Domestic Gross Sales:
+            <input type="number" id="gross-sales" name="GrossSales" required>
+          </label> 
+          <label>
+            Genre:
+            <select name="genre">
+              <option value="" disabled selected hidden>Select Your Genre</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="comedy">Comedy</option>
+              <option value="drama">Drama</option>
+              <option value="horror">Horror</option>
+              <option value="concert">Concert</option>
+              <option value="documentary">Concert</option>
+              <option value="musical">Musical</option>
+              <option value="romance">Romance</option>
+              <option value="sci-Fi">Sci-Fi</option>
+              <option value="thriller">Thriller</option>
+            </select>
+          </label>
+
+          <button class="submitBtn">Add Movie</button>
+        </form>
+      </section>
+
+      <section id="moviesBox">
+          <ul id="listOfAllMovies">
+
+          </ul>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
